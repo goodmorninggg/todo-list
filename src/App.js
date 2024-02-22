@@ -1,13 +1,14 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 
 //import {Footer} from "./MyComponents/Footer";
 //import Todo from "./MyComponents/Todo";
 import Todos from "./MyComponents/Todos";
-import Todoitems from "./MyComponents/TodoItems";
+//import Todoitems from "./MyComponents/TodoItems";
 import Header from './MyComponents/Header';
 import Footer from './MyComponents/Footer';
 import React, { useState } from "react";
+import { AddTodos } from './MyComponents/AddTodos';
 
 function App() {
   
@@ -37,6 +38,7 @@ function App() {
   return (
    <>
    <Header title ="My Todo List" searchBar={false} />
+   <AddTodos />
    <Todos todos ={todos} onDelete={onDelete}/>
   
    <Footer/>

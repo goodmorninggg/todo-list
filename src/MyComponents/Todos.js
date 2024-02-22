@@ -6,10 +6,11 @@ import { TodoItems } from './TodoItems'
   return (
     <div className="container">
       <h3 className="text-center my-3">Todos List</h3>
-      {props.todos.map((todos)=>{
-        return <TodoItems todos={todos} onDelete={props.onDelete}/>
-      })}
-      
+      {props.todos.length===0? <p>No todos to display</p>:
+      props.todos.map((todos)=>{
+        return <TodoItems todos={todos} key={todos.sno}  onDelete={props.onDelete}/>
+      })  
+    }
     </div>
   )
 }
